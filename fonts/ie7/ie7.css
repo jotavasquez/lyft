@@ -1,0 +1,13 @@
+.icon-twitter {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;');
+}
+.icon-facebook {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09a;');
+}
+.icon-facebook-f {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09a;');
+}
+.icon-instagram {
+  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf16d;');
+}
+

@@ -1,3 +1,420 @@
-/*
- * Estilos de tu proyecto
- */
+* { /* todos los elementos trabajaran de de la misma manera, padding y border no incrementan su ancho*/
+  -webkit-box-sizing: border-box;  
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.1; /* tamaño del interlineado*/
+}
+
+/* ajustes generales para imagen*/
+img {
+  vertical-align: middle;
+  max-width: 100%;/* redimensionar imágenes responsive */
+  height: auto; /* redimensionar imágenes responsive */
+}
+
+/* clases reutilizables*/
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.m-0 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.cgray {
+	color:#728099;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+a {
+  color: #ff00bf;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff00bf;
+  text-decoration: none;
+}
+
+/* secciones de la página*/
+
+section {
+	display: flex; /*contenedor flex en bloque*/
+	flex-direction:	column; /*items direcion horizontal*/
+	flex-wrap: nowrap; /* permite multilinea */
+	width: 100%;
+	height: auto;
+}
+/*contenedores*/
+.container {
+	display: inline-flex; /*contenedor flex en linea*/
+	flex-wrap: nowrap; /*items en multilinea si es necesario*/
+}
+
+/*------- Estilos para el menu superior-------*/
+nav { /* div contenedor*/
+	position: fixed;
+	top:0;
+ 	background-color: rgba(0, 0, 0, 0.3); 
+	display: flex; /* modo flex para maquetar*/
+	flex-direction: row;  /* modo horizontal*/
+	flex-wrap: nowrap; /* permite multilinea */
+	align-items: center;
+	padding:2.5% 14% 2% 6%;
+	z-index: 4;
+}
+
+nav a {  /* links items del menu*/
+	color:#FFF;
+	width: auto;
+	display: inline-flex;
+	line-height: 100%;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1em;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+ }
+
+/* boton trasnparente del menu*/
+.button {
+	border-color: #FFF;
+	width: 9%;
+	border: solid;
+ 	border-width: 1px;
+	text-decoration: none;/*borra linea link*/
+ 	padding: 1% 1.8%;
+    color: #FFF;
+    background-color: rgba(255, 255, 255, .0); 
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: 300;
+    margin-left: 3%;
+}
+
+/*logo superior izquierdo*/
+nav img {  
+	width: 6%;
+	height: auto;
+	margin-left: 0.5%;
+	margin-right: auto;
+	display: inline-flex;
+}
+
+/*-------estilos para secciones de la página-------*/
+
+/*intro formulario*/
+  .intro {
+  	width: 100%;
+  	height: 100%;
+ }
+/*imagen de fondo*/
+.image {
+	background-image: url(../assets/images/hero.gif);
+ 	background-size: cover;
+ 	background-repeat: no-repeat; 
+ 	width: 100%;
+ 	height: 600px;
+ 	top:-100px;
+ 	padding-top:0;
+ 	z-index: -1;
+ 	position: absolute;
+}
+
+/*recuadro formulario*/
+ .background {
+ 	top: 100px;
+	background-color: #FFF;
+	padding: 4.8% 5% 4% 5%;
+	width: 41%;
+	height: 35%;
+	margin-left: auto;
+	margin-right: 0;
+	position: relative;
+	z-index: 3;
+ }
+
+ h1 {
+     font-size: 2.3em;
+     font-weight: 500;
+     color: #470086;
+     text-align: left;
+     line-height: 1; /* tamaño del interlineado*/
+ }
+
+ h3{
+ 	 font-size: .800rem;
+     font-weight: 600;
+     color: #470086;
+     text-align: left;
+     line-height: 1; /* tamaño del interlineado*/
+ }
+
+form {
+	text-align: left;
+	margin-bottom: 1.8rem;
+	margin-top: 1.8rem;
+}
+
+input {
+	color:#bfc7d9;
+	border-top:none;
+	border-right: none;
+	border-left: none; 
+	padding-bottom: 1%;
+	width: 100%;
+	border-width: thin;
+	outline: none;
+	border-color: #352384;
+}
+
+.btn_intro {
+	background-color: #ff00bf;
+    font-size: .900rem;
+    line-height: 1.5;
+    color: #FFF;
+    font-weight: 400;
+    text-align: center;
+    padding: .75rem 1.25rem;
+    border-color: transparent;
+    border-radius: .5rem;
+}
+
+#sign {
+	margin-left: 1em;
+	color: #728099;
+	text-decoration: underline;
+}
+
+.small {
+	font-size: .6rem;
+	padding-top: 1em;;
+}
+
+/*------Sección intro2------*/
+
+.intro2 { /*color de fondo*/
+	background: linear-gradient(#76278F, #2B1E66);
+    width: 100%;
+    margin-top: 10%;
+    padding-top:5%;
+    box-shadow: 0 -2em 3em 2em  #76278F; /*añade una sombra superior al div*/
+ 	z-index: 2;
+}
+
+.intro2 .container {
+	margin: 0% 12.1% 5%;
+	display: inline-flex;
+	z-index: 2;
+}
+
+.intro2 .container div {
+	color: #FFF;
+	flex-basis: 50%; /*divide los divs dos iguales*/
+	justify-content: center;
+}
+
+.intro2 .text div  { /*separación entre bloques de texto*/
+	padding: 1em 0;
+}
+
+.intro2 .container img {
+	width: 100%;
+	height: auto;
+	margin:0 5%;
+}	
+
+.intro2 .text p {
+	font-weight: 400;
+	font-size: .900rem;
+    line-height: 1.5;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 1.75rem;
+}
+
+/*------Section watch1 y 3------*/
+
+ .tvideo{
+ 	width: 100%;
+	justify-content: space-between;
+	flex-direction:	row; /*items direcion horizontal*/
+	display: inline-flex;
+	margin:0;
+	padding: 0;
+ }
+
+.top {
+	font-weight: 600;
+	font-size: .7em;
+}
+
+.review {
+	width: 33%;
+	height: auto;
+	padding: 2% 4% 0% 5%;
+	line-height: 1.5;
+	font-size: 0.9em;
+	margin:0;
+}
+
+iframe {
+	width: 824px; 
+	height: 464px;
+}
+
+/*------Section watch2------*/
+
+.tvideo2{
+ 	width: 100%;
+	flex-basis: 100%; /*divide los divs dos iguales*/
+	justify-content: space-between;
+	display: inline-flex;
+	flex-direction:	row-reverse; /*items direcion horizontal*/
+ }
+
+/*------footer------*/
+footer{
+	width: 100%;
+	height: auto;
+	display: flex;
+	background-color: #383349;
+}
+
+footer .container {
+	flex-wrap: wrap;
+}
+
+.fcontainer {
+	display: inline-flex;
+	margin-left: 10%;
+	margin-right: 14%;
+	margin-top: 3%;
+}
+
+.fcontainer ul {
+	margin:0;
+	width: 100%;
+}
+
+.ffcontainer {
+	display: flex;
+}
+
+/* footer: links columnas izquierda*/
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+ul li {
+	width: auto;
+	height: auto;
+	padding: .8em 0;
+}
+
+ul li h3{
+	color:#f3f3f5;
+	font-weight: 500;
+	font-size: 1em;
+}
+
+ul li a{
+	color:#f3f3f5;
+	font-weight: 400;
+	font-size: .9em;
+}
+
+ /* footer: logos app, google, microsoft*/
+
+footer img {
+	width: 66%;
+	height: auto;
+	padding: 1em;
+	margin-left:auto;
+	margin-right: .1em;
+}
+
+ /* footer: iconos sociales*/
+
+.fsocial{
+	width: 100%;
+	height:auto;
+	text-align: center;
+	margin: 0 30%;
+}
+
+.fsocial ul {
+	width: 100%;
+	margin: 8% 30% 0;
+
+}
+
+.fsocial ul li {
+	color: #FFF;
+	display: inline-block;
+	float:left;
+}
+
+ .circle {
+    width: 2.5em;
+    height: 2.5em;
+    padding:0;
+    margin: 0.5em 1em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #383349;
+    border-style: solid;
+    border-width: 1px;
+	border-color:#FFF;
+}
+
+span {
+    font-size: 1.3em;
+    color: #FFF;
+    text-align: center;
+    padding:1%;
+}
+
+ /* footer: derechos reservados*/
+
+.end {
+	color: #FFF;
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin-left:10% ;
+	margin-right:10%;
+}
+
+.end p {
+	text-align: center;
+	font-size: .9em;
+	padding: 3% 30%;
+}
+
+hr {
+	width: 70%;
+}
+
+
